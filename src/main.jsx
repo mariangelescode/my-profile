@@ -14,18 +14,18 @@ import Gists, {loader as gistsLoader} from './routes/Gists'
 
 const router = createBrowserRouter([
   {
-    path:'/', //donde y cuando
+    path:'/my-profile/', //donde y cuando
     element: <Home />, // qué
     loader: homeLoader,
     //errorElement: <Error />
     children: [
       {
-        path:'/repos', //donde y cuando
+        path:'/my-profile/repos', //donde y cuando
         element: <Repos />, // qué
         loader: reposLoader,
       },
       {
-        path:'/gists', //donde y cuando
+        path:'/my-profile/gists', //donde y cuando
         element: <Gists />, // qué
         loader: gistsLoader,
       },

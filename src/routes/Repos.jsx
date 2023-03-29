@@ -21,7 +21,7 @@ export default function Repos(){
                 alignItems: 'stretch',
             }}>
                 {repos.map(r=> (
-                    <Link to={`../repoDetail/r=${r.id}`}>
+                    <Link to={`../repoDetail/${r.id}`}>
                         <p key={r.id} className="reposBtn">{r.name}</p>
                     </Link>
                 ))}

@@ -28,7 +28,7 @@ export default function RepoDetail(){
                     // <p>
                     //     <p key={r.id} >{r.id}</p>
                     // </p>
-                r.id == repoId && <p>{r.id}</p>
+                r.id == repoId && <p>{r.name}</p>
                 
             ))}
         </>

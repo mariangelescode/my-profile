@@ -36,13 +36,13 @@ export default function Home(){
             <h2>{data.name}</h2>
             <p>{data.bio}</p>
             <div style={{display: 'flex', gap: '2em'}}>
-                <Link to="my-profile/repos">
+                <Link to="repos">
                     <button style={pathname.includes('repos') ? activeStyles : undefined}>Repos</button>
                 </Link>
-                <Link to="my-profile/gists">
+                <Link to="gists">
                     <button style={pathname.includes('gists') ? activeStyles : undefined}>Gists</button>
                 </Link>
-                <Link to="my-profile/orgs">
+                <Link to="orgs">
                     <button>Orgs</button>
                 </Link>
             </div>

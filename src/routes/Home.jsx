@@ -23,7 +23,7 @@ export default function Home(){
     const { data } = useLoaderData();
     console.log(data);
 
-    const activeStyles = {background: 'steelblue'};
+    const activeStyles = {background: 'var(--secondary)'};
     return(
         <section style={{
             flexDirection: 'column',
@@ -35,7 +35,7 @@ export default function Home(){
             <img src="{data.avatar_url}" width="200px" alt="avatar" />
             <h2>{data.name}</h2>
             <p>{data.bio}</p>
-            <div style={{display: 'flex'}}>
+            <div style={{display: 'flex', gap: '2em'}}>
                 <Link to="repos">
                     <button style={pathname.includes('repos') ? activeStyles : undefined}>Repos</button>
                 </Link>
@@ -47,7 +47,7 @@ export default function Home(){
                 </Link>
             </div>
 
-            //aquí se renderiza la ruta hija
+            {/* //aquí se renderiza la ruta hija */}
             <Outlet />
 
         </section>

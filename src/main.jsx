@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 import Home, {loader as homeLoader} from './routes/Home'
 import Repos, {loader as reposLoader} from './routes/Repos'
 import Gists, {loader as gistsLoader} from './routes/Gists'
+import RepoDetail, {loader as repoDetailLoader} from './routes/RepoDetail'
 
 // import Home, {loader as homeLoader} from './routes/Home'
 
@@ -31,6 +32,12 @@ const router = createBrowserRouter([
       },
     
     ]
+  },
+  {
+    path:'/my-profile/repodetail/:repoId', //donde y cuando
+    element: <RepoDetail />, // qué
+    // loader: ({params}) => { repoDetailLoader(params)}
+    loader: repoDetailLoader,
   }
 ]);
 

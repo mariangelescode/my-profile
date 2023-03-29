@@ -12,16 +12,22 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+
+  --primary: #FD841F;
+  --secondary: #E14D2A;
+  --third: #CD104D;
+  --fourth: #9C2C77;
 }
 
-a {
+/* a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
 a:hover {
   color: #535bf2;
-}
+} */
 
 body {
   margin: 0;
@@ -29,6 +35,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--primary);
 }
 
 h1 {
@@ -43,16 +50,28 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  /* transition: border-color 0.25s; */
+  background-color: var(--fourth);
 }
 button:hover {
-  border-color: #646cff;
+  border-color: var(--secondary);
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.reposBtn{
+  width: 235px;
+  text-align: center;
+  background-color: var(--fourth);
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding: 10px;
+  cursor: pointer;
 }
 
 @media (prefers-color-scheme: light) {
@@ -67,3 +86,5 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+

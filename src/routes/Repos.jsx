@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 export const loader = async() => {
     const repos = await (await fetch('https://api.github.com/users/mariangelescode/repos')).json();
@@ -12,9 +12,20 @@ export default function Repos(){
     return(
         <>
             <h2>Los Repos</h2>
-            {repos.map(r=> (
-                <p key={r.id}>{r.name}</p>
-            ))}
+            <div style={{
+                display: 'flex',
+                gap: '2em',
+                textAlign: 'center',
+                flexWrap: 'wrap',
+                justifyContent: 'center',
+                alignItems: 'stretch',
+            }}>
+                {repos.map(r=> (
+                    <Link to={`../repoDetail/r=${r.id}`}>
+                        <p key={r.id} className="reposBtn">{r.name}</p>
+                    </Link>
+                ))}
+            </div>
         
         </>
     )
